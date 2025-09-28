@@ -16,19 +16,19 @@ export function ContactPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-red-600" />
-                <span>Av. Industrial 123, Ciudad</span>
+                <span>Prolongación 42 oriente 1417, San Pedro Cholula</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-red-600" />
-                <span>+1 (555) 123-4567</span>
+                <span>+52 (222) 128-3294</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-red-600" />
-                <span>info@neumaticosagroindustriales.com</span>
+                <span>gfa_ww@outlook.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Facebook className="w-5 h-5 text-red-600" />
-                <span>@neumaticosagroindustriales</span>
+                <span>@Neumáticos Agro Industriales </span>
               </div>
             </div>
           </CardContent>

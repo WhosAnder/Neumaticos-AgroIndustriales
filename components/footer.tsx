@@ -14,9 +14,9 @@ export function Footer() {
             <Image
               src="/images/logo-horizontal-new.png"
               alt="Neumáticos Agroindustriales"
-              width={350}
-              height={75}
-              className="h-14 w-auto mb-4 brightness-0 invert"
+              width={200}
+              height={0}
+              className="h-auto w-[200px] mb-4 brightness-0 invert"
             />
             <p className="text-gray-400 text-sm">
               Especialistas en neumáticos para maquinaria agrícola e industrial. Calidad y servicio garantizado.
@@ -29,15 +29,15 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-red-500" />
-                <span className="text-gray-400">Av. Industrial 123, Ciudad</span>
+                <span className="text-gray-400">Prolongación 42 oriente 1417, San Pedro Cholula</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-red-500" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+52 (222) 128-3294</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-red-500" />
-                <span className="text-gray-400">info@neumaticosagroindustriales.com</span>
+                <span className="text-gray-400">gfa_ww@outlook.com</span>
               </div>
             </div>
           </div>
@@ -46,8 +46,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Síguenos</h4>
             <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white hover:bg-red-600">
-                <Facebook className="w-5 h-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-14 w-14 text-gray-400 hover:text-white hover:bg-red-600"
+              >
+                <Facebook className="h-15 w-15" />
               </Button>
             </div>
           </div>

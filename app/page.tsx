@@ -45,7 +45,10 @@ export default function NeumaticoApp() {
         icon: Construction,
         description: "Neumáticos para tractores agrícolas",
       },
-      { id: "implemento", name: "Implemento (Empacadora)", icon: Truck, description: "Neumáticos para empacadoras" },
+      { id: "implemento",
+        name: "Implemento (Empacadora)",
+        icon: Truck, description: "Neumáticos para empacadoras"
+      },
       { id: "trilladora", name: "Trilladora", icon: Construction, description: "Neumáticos para trilladoras" },
       {
         id: "minicargador-agricola",
@@ -254,7 +257,7 @@ export default function NeumaticoApp() {
         <Button
           size="icon"
           className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg"
-          onClick={() => window.open("https://wa.me/1234567890", "_blank")}
+          onClick={() => window.open("https://wa.me/2221283294", "_blank")}
         >
           <MessageCircle className="w-6 h-6" />
         </Button>

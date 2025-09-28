@@ -27,8 +27,8 @@ export function MachineryPage({ selectedCategory, machineryByCategory, setSelect
               <CardContent className="p-6 text-center">
                 <div className="h-24 flex items-center justify-center mb-4">
                   <Image
-                    src={`/images/${machine.id}.png`}
-                    alt={machine.name}
+                    src={`/images/${machine.name}.png`}
+                    alt={machine.id}
                     width={100}
                     height={80}
                     className="h-auto max-h-24 w-auto"

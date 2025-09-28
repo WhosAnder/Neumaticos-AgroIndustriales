@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { Construction, Truck } from "lucide-react"
+import { FacebookFeed } from "@/components/pages/FacebookFeed"
 
 interface HomePageProps {
   setCurrentPage: (page: string) => void
@@ -46,7 +47,7 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
             <Button
               className="bg-white border-white text-gray-800 hover:bg-gray-100 hover:text-gray-900 px-8 py-3 text-lg rounded-full"
               onClick={() =>
-                window.open("https://wa.me/1234567890?text=Hola, me gustaría solicitar una cotización", "_blank")
+                window.open("https://wa.me/2221283294?text=Hola, me gustaría solicitar una cotización", "_blank")
               }
             >
               Solicitar cotización
@@ -107,7 +108,7 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
           </CardContent>
         </Card>
 
-        {/* Testimonials */}
+        {/* Testimonials 
         <Card className="bg-gray-50">
           <CardContent className="p-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Lo que dicen nuestros clientes</h3>
@@ -145,8 +146,9 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
             </div>
           </CardContent>
         </Card>
+        */}
 
-        {/* Blog Section */}
+        {/* Blog Section 
         <Card className="bg-white">
           <CardContent className="p-8">
             <h3 className="text-4xl font-bold text-gray-900 mb-8 text-center">Blog y noticias</h3>
@@ -182,6 +184,13 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
             </div>
           </CardContent>
         </Card>
+        */}
+        <Card className="bg-white">
+        <CardContent className="p-8">
+          <h3 className="text-4xl font-bold text-gray-900 mb-8 text-center">Blog y noticias</h3>
+          <FacebookFeed />
+        </CardContent>
+      </Card>
 
         {/* CTA Section */}
         <Card className="bg-gradient-to-r from-gray-900 to-black text-white">
@@ -201,7 +210,7 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
               <Button
                 className="bg-white border-white text-gray-800 hover:bg-gray-100 hover:text-gray-900 px-8 py-3"
                 onClick={() =>
-                  window.open("https://wa.me/1234567890?text=Hola, necesito asesoría personalizada", "_blank")
+                  window.open("https://wa.me/2221283294?text=Hola, necesito asesoría personalizada", "_blank")
                 }
               >
                 WhatsApp
