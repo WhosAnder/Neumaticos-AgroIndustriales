@@ -1,4 +1,4 @@
-import { MessageCircle, Settings, Truck, Construction, type LucideIcon } from "lucide-react"
+import { MessageCircle, Settings, Truck, Construction, FileText, type LucideIcon } from "lucide-react"
 
 // ── Types ──────────────────────────────────────────────────────────
 
@@ -13,6 +13,7 @@ export interface Machinery {
   id: string
   name: string
   icon: LucideIcon
+  image: string
   description: string
 }
 
@@ -31,6 +32,7 @@ export interface Service {
   title: string
   description: string
   icon: LucideIcon
+  buttonText?: string
 }
 
 // ── Data ───────────────────────────────────────────────────────────
@@ -56,55 +58,63 @@ export const machineryByCategory: Record<string, Machinery[]> = {
       id: "tractor",
       name: "Tractor agrícola",
       icon: Construction,
+      image: "/maquinas/Minicargador.png",
       description: "Neumáticos para tractores agrícolas",
     },
     {
       id: "implemento",
       name: "Implemento (Empacadora)",
       icon: Truck,
+      image: "/maquinas/cargador.png",
       description: "Neumáticos para empacadoras",
     },
     {
       id: "trilladora",
       name: "Trilladora",
       icon: Construction,
+      image: "/images/trilladora.png",
       description: "Neumáticos para trilladoras",
     },
     {
       id: "minicargador-agricola",
       name: "Minicargador",
       icon: Truck,
+      image: "/maquinas/Minicargador.png",
       description: "Neumáticos para minicargadores agrícolas",
     },
   ],
   industrial: [
-    { id: "grua", name: "Grúa", icon: Construction, description: "Neumáticos para grúas" },
-    { id: "montacargas", name: "Montacargas", icon: Truck, description: "Neumáticos para montacargas" },
-    { id: "cargador", name: "Cargador", icon: Construction, description: "Neumáticos para cargadores" },
-    { id: "retroexcavadora", name: "Retroexcavadora", icon: Truck, description: "Neumáticos para retroexcavadoras" },
+    { id: "grua", name: "Grúa", icon: Construction, image: "/maquinas/grua.png", description: "Neumáticos para grúas" },
+    { id: "montacargas", name: "Montacargas", icon: Truck, image: "/maquinas/montacargas.png", description: "Neumáticos para montacargas" },
+    { id: "cargador", name: "Cargador", icon: Construction, image: "/maquinas/cargador.png", description: "Neumáticos para cargadores" },
+    { id: "retroexcavadora", name: "Retroexcavadora", icon: Truck, image: "/images/retroexcavadora.png", description: "Neumáticos para retroexcavadoras" },
     {
       id: "vibrocompactador",
       name: "Vibro compactador",
       icon: Construction,
+      image: "/maquinas/VibroCompactador.png",
       description: "Neumáticos para vibro compactadores",
     },
     {
       id: "motoconformadora",
       name: "Motoconformadora",
       icon: Truck,
+      image: "/maquinas/Motoconformadora.png",
       description: "Neumáticos para motoconformadoras",
     },
-    { id: "camion", name: "Camión", icon: Construction, description: "Neumáticos para camiones" },
+    { id: "camion", name: "Camión", icon: Construction, image: "/maquinas/camion.png", description: "Neumáticos para camiones" },
     {
       id: "camion-muevetierra",
       name: "Camión muevetierra",
       icon: Truck,
+      image: "/maquinas/CamionMuevetierra.png",
       description: "Neumáticos para camiones muevetierra",
     },
     {
       id: "minicargador-industrial",
       name: "Minicargador",
       icon: Construction,
+      image: "/maquinas/Minicargador.png",
       description: "Neumáticos para minicargadores industriales",
     },
   ],
@@ -119,7 +129,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "15.5-38",
       pattern: "RTW",
       price: "$1,250",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
     {
       id: 2,
@@ -128,7 +138,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "18.4-34",
       pattern: "R-1",
       price: "$1,450",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
     {
       id: 3,
@@ -137,7 +147,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "16.9-30",
       pattern: "AGRIBIB",
       price: "$1,350",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
   ],
   cosechadora: [
@@ -148,7 +158,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "1000-16",
       pattern: "F-2",
       price: "$850",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
     {
       id: 5,
@@ -157,7 +167,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "73x44.00-32",
       pattern: "550",
       price: "$2,850",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
   ],
   retroexcavadora: [
@@ -168,7 +178,7 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "12.5/80-18",
       pattern: "SKS 532",
       price: "$650",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
     {
       id: 7,
@@ -177,12 +187,19 @@ export const tiresByMachinery: Record<string, Tire[]> = {
       size: "17.5L-24",
       pattern: "LD 250",
       price: "$950",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/hero-background.png",
     },
   ],
 }
 
 export const services: Service[] = [
+  {
+    id: 3,
+    title: "Cotización",
+    description: "Solicita precio para neumáticos agrícolas e industriales según medida, maquinaria o aplicación.",
+    icon: FileText,
+    buttonText: "Solicitar cotización",
+  },
   {
     id: 1,
     title: "Asesoría personalizada",

@@ -36,11 +36,11 @@ export default async function MachineryPage({ params }: PageProps) {
                 <CardContent className="p-6 text-center">
                   <div className="h-24 flex items-center justify-center mb-4">
                     <Image
-                      src={`/images/${machine.name}.png`}
-                      alt={machine.id}
+                      src={machine.image}
+                      alt={machine.name}
                       width={100}
                       height={80}
-                      className="h-auto max-h-24 w-auto"
+                      className="h-auto max-h-24 w-auto object-contain"
                     />
                   </div>
                   <h3 className="font-semibold text-lg text-black">{machine.name}</h3>

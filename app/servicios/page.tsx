@@ -22,7 +22,9 @@ export default function ServiciosPage() {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      <Button className="bg-red-600 hover:bg-red-700 text-white">Solicitar servicio</Button>
+                      <Button className="bg-red-600 hover:bg-red-700 text-white">
+                        {service.buttonText || "Solicitar servicio"}
+                      </Button>
                     </div>
                   </div>
                 </CardContent>
