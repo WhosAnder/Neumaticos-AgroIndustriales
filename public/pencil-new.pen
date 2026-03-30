@@ -1,0 +1,1675 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": -118,
+      "name": "Landing Page",
+      "clip": true,
+      "width": 3457,
+      "height": 5439,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "ZxXd9",
+          "name": "header",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "gap": 32,
+          "padding": [
+            32,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "7Xjr3",
+              "name": "logoContainer",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 6,
+                  "id": "DD2Bn",
+                  "name": "logoIcon",
+                  "fill": "#D32F2F",
+                  "width": 40,
+                  "height": 40
+                },
+                {
+                  "type": "text",
+                  "id": "VyrB5",
+                  "name": "logoText",
+                  "fill": "#1A1A1A",
+                  "content": "NEUMÁTICOS AGROINDUSTRIALES",
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gfiiW",
+              "name": "navSpacer",
+              "width": "fill_container",
+              "height": "fit_content(0)"
+            },
+            {
+              "type": "frame",
+              "id": "1UCLM",
+              "name": "nav",
+              "gap": 40,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N0YoT",
+                  "name": "nav1",
+                  "fill": "#D32F2F",
+                  "content": "Inicio",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "7yX3p",
+                  "name": "nav2",
+                  "fill": "#222222",
+                  "content": "Categorías",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Z9WYi",
+                  "name": "nav3",
+                  "fill": "#222222",
+                  "content": "Servicios",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "n7yO6",
+                  "name": "nav4",
+                  "fill": "#222222",
+                  "content": "Contacto",
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "E8EQL",
+                  "name": "ctaBtn",
+                  "fill": "#B71C1C",
+                  "cornerRadius": 4,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "743Js",
+                      "name": "ctaText",
+                      "fill": "#FFFFFF",
+                      "content": "Solicitar cotización",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yT5mq",
+          "name": "heroSection",
+          "width": "fill_container",
+          "height": 720,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1774850478276.png",
+            "mode": "fill"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "1nEft",
+              "name": "overlay",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#000000B3",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                0,
+                80
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "B2yeS",
+                  "name": "heroTitle",
+                  "fill": "#FFFFFF",
+                  "content": "Neumáticos agrícolas e industriales\npara trabajo pesado.",
+                  "lineHeight": 1.1,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 72,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "LtCIh",
+                  "name": "heroSubtitle",
+                  "fill": "#FFFFFF",
+                  "content": "Soluciones integrales, robustas y duraderas para tractores, cosechadoras, montacargas, camiones y maquinaria pesada.",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 26
+                },
+                {
+                  "type": "frame",
+                  "id": "YsG8X",
+                  "name": "heroButtons",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AupYa",
+                      "name": "btnPrimary",
+                      "fill": "#D32F2F",
+                      "cornerRadius": 6,
+                      "padding": [
+                        24,
+                        48
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wsmA0",
+                          "fill": "#FFFFFF",
+                          "content": "Solicitar cotización",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "D5RNl",
+                      "name": "btnSecondary",
+                      "fill": "#333333",
+                      "cornerRadius": 6,
+                      "padding": [
+                        24,
+                        48
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MaXo7",
+                          "fill": "#FFFFFF",
+                          "content": "Ver catálogo",
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "YoEwf",
+          "name": "trustBar",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "padding": [
+            64,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "I0IDQ",
+              "name": "t1",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ntgcj",
+                  "name": "t1Top",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cvPVR",
+                      "fill": "#D32F2F",
+                      "content": "15+",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "q4V1V",
+                      "fill": "#FFFFFF",
+                      "content": "años",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "HSLtb",
+                  "fill": "#888888",
+                  "content": "DE EXPERIENCIA COMPROBADA",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "aRa6x",
+              "fill": "#333333",
+              "width": 1,
+              "height": 60
+            },
+            {
+              "type": "frame",
+              "id": "0AlES",
+              "name": "t2",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CV0HR",
+                  "name": "t2Top",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PULV2",
+                      "fill": "#D32F2F",
+                      "content": "100%",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pWLEj",
+                      "fill": "#FFFFFF",
+                      "content": "robustos",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "wY3Vk",
+                  "fill": "#888888",
+                  "content": "SOLUCIONES AGRÍCOLAS E INDUSTRIALES",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "FWLjx",
+              "fill": "#333333",
+              "width": 1,
+              "height": 60
+            },
+            {
+              "type": "frame",
+              "id": "qkGXT",
+              "name": "t3",
+              "layout": "vertical",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kDD6z",
+                  "name": "t3Top",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zKg5J",
+                      "fill": "#D32F2F",
+                      "content": "24/7",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3vhGP",
+                      "fill": "#FFFFFF",
+                      "content": "soporte",
+                      "fontFamily": "Inter",
+                      "fontSize": 24,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "dV1hi",
+                  "fill": "#888888",
+                  "content": "ATENCIÓN ESPECIALIZADA",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kbBfD",
+          "name": "catSec",
+          "width": "fill_container",
+          "fill": "#F8F8F8",
+          "layout": "vertical",
+          "gap": 120,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "NAXtn",
+              "name": "catHead",
+              "layout": "vertical",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "9XQvr",
+                  "fill": "#D32F2F",
+                  "content": "NUESTROS PRODUCTOS",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "800",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Dd0NJ",
+                  "fill": "#1A1A1A",
+                  "content": "Soluciones específicas para su sector",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 56,
+                  "fontWeight": "900"
+                },
+                {
+                  "type": "text",
+                  "id": "EGLJF",
+                  "fill": "#555555",
+                  "content": "Ingeniería y durabilidad diseñadas para soportar las condiciones más extremas.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lDdnE",
+              "name": "catGrid",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "I75hU",
+                  "name": "c1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eLkSX",
+                      "name": "c1Img",
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "file:///Users/andregb/Documents/WORK/Neumaticos-AgroIndustriales/public/images/agricultural-machinery-new.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mtpmq",
+                      "name": "c1Cont",
+                      "layout": "vertical",
+                      "gap": 32,
+                      "padding": [
+                        80,
+                        64
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "0HuNK",
+                          "fill": "#FFFFFF",
+                          "content": "Neumáticos Agrícolas",
+                          "fontFamily": "Inter",
+                          "fontSize": 36,
+                          "fontWeight": "900"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NkUMA",
+                          "fill": "#DDDDDD",
+                          "content": "Maximiza la tracción y minimiza la compactación del suelo. Diseñados para prolongar la vida útil de tractores y equipos de cosecha pesados.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "9PN7q",
+                          "name": "c1CTA",
+                          "fill": "#D32F2F",
+                          "cornerRadius": 8,
+                          "gap": 12,
+                          "padding": [
+                            20,
+                            40
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TtUTU",
+                              "fill": "#FFFFFF",
+                              "content": "Explorar catálogo agrícola",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "hFJzO",
+                              "fill": "#FFFFFF",
+                              "content": "→",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vCRE8",
+                  "name": "c2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BsHcb",
+                      "name": "c2Img",
+                      "width": "fill_container",
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "file:///Users/andregb/Documents/WORK/Neumaticos-AgroIndustriales/public/images/industrial-machinery.png",
+                        "mode": "fill"
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a4VY9",
+                      "name": "c2Cont",
+                      "layout": "vertical",
+                      "gap": 32,
+                      "padding": [
+                        80,
+                        64
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "slStb",
+                          "fill": "#FFFFFF",
+                          "content": "Neumáticos Industriales",
+                          "fontFamily": "Inter",
+                          "fontSize": 36,
+                          "fontWeight": "900"
+                        },
+                        {
+                          "type": "text",
+                          "id": "9kBBY",
+                          "fill": "#DDDDDD",
+                          "content": "Resistencia superior a cortes y desgaste para las condiciones más exigentes en construcción, minería y logística pesada.",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 20,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qdlH8",
+                          "name": "c2CTA",
+                          "fill": "#D32F2F",
+                          "cornerRadius": 8,
+                          "gap": 12,
+                          "padding": [
+                            20,
+                            40
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Oftrs",
+                              "fill": "#FFFFFF",
+                              "content": "Explorar catálogo industrial",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "800"
+                            },
+                            {
+                              "type": "text",
+                              "id": "T7BHB",
+                              "fill": "#FFFFFF",
+                              "content": "→",
+                              "fontFamily": "Inter",
+                              "fontSize": 24,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nm7gn",
+          "name": "appSec",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "owYTG",
+              "name": "appHead",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LlQNU",
+                  "fill": "#D32F2F",
+                  "content": "MÚLTIPLES APLICACIONES",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "800",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "cUOd4",
+                  "fill": "#FFFFFF",
+                  "content": "Equipamos a las industrias más exigentes",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cQz1k",
+              "name": "appGrid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Pbf9U",
+                  "name": "r1",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "3XtKc",
+                      "name": "a1",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RxbFj",
+                          "content": "🚜",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tX6VU",
+                          "fill": "#FFFFFF",
+                          "content": "Tractores Agrícolas",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xMKrR",
+                      "name": "a2",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wAwuL",
+                          "content": "🌾",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "sNrDq",
+                          "fill": "#FFFFFF",
+                          "content": "Cosechadoras",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ye43a",
+                      "name": "a3",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "3Gvk2",
+                          "content": "🏗️",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "C0Kkj",
+                          "fill": "#FFFFFF",
+                          "content": "Retroexcavadoras",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w5nmU",
+                  "name": "r2",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "2gSb0",
+                      "name": "a4",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "7dj2N",
+                          "content": "📦",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vp0kn",
+                          "fill": "#FFFFFF",
+                          "content": "Montacargas",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Cl2Jp",
+                      "name": "a5",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zU6nL",
+                          "content": "🚛",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kRVox",
+                          "fill": "#FFFFFF",
+                          "content": "Camiones Pesados",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fJur5",
+                      "name": "a6",
+                      "width": "fill_container",
+                      "fill": "#151515",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": [
+                        48,
+                        40
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j8fHD",
+                          "content": "🏭",
+                          "fontFamily": "Inter",
+                          "fontSize": 48,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6Mj3u",
+                          "fill": "#FFFFFF",
+                          "content": "Maquinaria Industrial",
+                          "fontFamily": "Inter",
+                          "fontSize": 22,
+                          "fontWeight": "800"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "f4jAS",
+          "name": "whySec",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "URciz",
+              "name": "wHead",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vIFXL",
+                  "fill": "#D32F2F",
+                  "content": "NUESTRA DIFERENCIA",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "800",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "XsBzd",
+                  "fill": "#1A1A1A",
+                  "content": "¿Por qué elegir Neumáticos Agroindustriales?",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ss4jr",
+              "name": "wGrid",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "q7jrG",
+                  "name": "w1",
+                  "width": "fill_container",
+                  "fill": "#F8F8F8",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 48,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SNAUI",
+                      "fill": "#D32F2F",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DqUR7",
+                      "fill": "#1A1A1A",
+                      "content": "Asesoría Técnica",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wG6MV",
+                      "fill": "#444444",
+                      "content": "Garantice el retorno de inversión. Indicamos el rodamiento y compuesto exacto para su operación.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FS7dD",
+                  "name": "w2",
+                  "width": "fill_container",
+                  "fill": "#F8F8F8",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 48,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ojzVu",
+                      "fill": "#D32F2F",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EdOrU",
+                      "fill": "#1A1A1A",
+                      "content": "Alta Durabilidad",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "plQkQ",
+                      "fill": "#444444",
+                      "content": "Neumáticos probados en minería y campo asegurando resistencia extrema al desgaste y cortes.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d3P8j",
+                  "name": "w3",
+                  "width": "fill_container",
+                  "fill": "#F8F8F8",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "padding": 48,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pvYTa",
+                      "fill": "#D32F2F",
+                      "content": "03",
+                      "fontFamily": "Inter",
+                      "fontSize": 48,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "EYKkm",
+                      "fill": "#1A1A1A",
+                      "content": "Logística Exprés",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "900"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OSL5m",
+                      "fill": "#444444",
+                      "content": "Surtimos urgente porque sabemos que sus equipos detenidos son pérdidas incosteables.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DZNqJ",
+          "name": "testSec",
+          "width": "fill_container",
+          "fill": "#111111",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Uat2Q",
+              "name": "tHead",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SEYkf",
+                  "fill": "#D32F2F",
+                  "content": "NUESTROS CLIENTES",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "800",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "cFHUA",
+                  "fill": "#FFFFFF",
+                  "content": "Confianza respaldada por la industria",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pSG1D",
+              "name": "tGrid",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VAYS0",
+                  "name": "t1",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    64,
+                    48
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JV41U",
+                      "fill": "#333333",
+                      "content": "❝",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "guCk8",
+                      "fill": "#EEEEEE",
+                      "content": "La asesoría fue clave para nuestra flota. Redujimos costos operativos cambiando a las llantas correctas en menos tiempo de lo esperado.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "o6ADX",
+                      "name": "t1Auth",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "OivXK",
+                          "name": "t1Av",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#E0E0E0",
+                          "cornerRadius": 100
+                        },
+                        {
+                          "type": "frame",
+                          "id": "6A36S",
+                          "name": "t1NamC",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8dWzI",
+                              "fill": "#FFFFFF",
+                              "content": "ROBERTO MARTÍNEZ",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "900",
+                              "letterSpacing": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "PyvtN",
+                              "fill": "#888888",
+                              "content": "Jefe de Flota, Logística S.A.",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XBUme",
+                  "name": "t2",
+                  "width": "fill_container",
+                  "fill": "#1A1A1A",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    64,
+                    48
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QTp9f",
+                      "fill": "#333333",
+                      "content": "❝",
+                      "fontFamily": "Inter",
+                      "fontSize": 64,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oLl2T",
+                      "fill": "#EEEEEE",
+                      "content": "Excelente atención y rapidez. Los neumáticos agrícolas llegaron justo para la temporada de cosecha, ahorrándonos miles en pérdida de tiempo.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Jdhc7",
+                      "name": "t2Auth",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KMgvQ",
+                          "name": "t2Av",
+                          "width": 56,
+                          "height": 56,
+                          "fill": "#E0E0E0",
+                          "cornerRadius": 100
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Wwrwr",
+                          "name": "t2NamC",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "afxhw",
+                              "fill": "#FFFFFF",
+                              "content": "CARLOS SANTANA",
+                              "fontFamily": "Inter",
+                              "fontSize": 16,
+                              "fontWeight": "900",
+                              "letterSpacing": 1
+                            },
+                            {
+                              "type": "text",
+                              "id": "hrBcE",
+                              "fill": "#888888",
+                              "content": "Productor Agrícola",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "prRT2",
+          "name": "ctaSec",
+          "width": "fill_container",
+          "fill": "#111111",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            120,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "c9OND",
+              "fill": "#FFFFFF",
+              "content": "¿Listo para maximizar el rendimiento de tu maquinaria?",
+              "lineHeight": 1.1,
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "900"
+            },
+            {
+              "type": "text",
+              "id": "jy0fB",
+              "fill": "#CCCCCC",
+              "content": "Nuestros expertos están listos para recomendarte la solución ideal para tus equipos.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lu23a",
+              "name": "ctaBtns",
+              "gap": 24,
+              "padding": [
+                32,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "8zYce",
+                  "name": "cb1",
+                  "fill": "#D32F2F",
+                  "cornerRadius": 8,
+                  "padding": [
+                    20,
+                    48
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9SkzV",
+                      "fill": "#FFFFFF",
+                      "content": "Contactar ahora",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vfIWw",
+                  "name": "cb2",
+                  "fill": "#25D366",
+                  "cornerRadius": 8,
+                  "padding": [
+                    20,
+                    48
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IoDxb",
+                      "fill": "#FFFFFF",
+                      "content": "WhatsApp",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "800"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TGXQH",
+          "name": "footer",
+          "width": "fill_container",
+          "fill": "#0A0A0A",
+          "layout": "vertical",
+          "gap": 80,
+          "padding": [
+            80,
+            80,
+            40,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "kkYOv",
+              "name": "fTop",
+              "width": "fill_container",
+              "gap": 64,
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Xd8ME",
+                  "name": "fCol1",
+                  "width": 380,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Fz1V2",
+                      "name": "flCont",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 6,
+                          "id": "F4DnR",
+                          "fill": "#D32F2F",
+                          "width": 40,
+                          "height": 40
+                        },
+                        {
+                          "type": "text",
+                          "id": "UcyjC",
+                          "fill": "#FFFFFF",
+                          "content": "NEUMÁTICOS\nAGROINDUSTRIALES",
+                          "lineHeight": 1.1,
+                          "fontFamily": "Inter",
+                          "fontSize": 18,
+                          "fontWeight": "900"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "tiOGk",
+                      "fill": "#888888",
+                      "content": "Proveedores de soluciones industriales y agrícolas diseñadas para el rendimiento extremo y máxima durabilidad.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VGlgy",
+                  "name": "fCols",
+                  "gap": 100,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KK2MM",
+                      "name": "fCol2",
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j8Gii",
+                          "fill": "#FFFFFF",
+                          "content": "PRODUCTOS",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "800",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "Dfgne",
+                          "fill": "#AAAAAA",
+                          "content": "Línea Agrícola",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vIiaj",
+                          "fill": "#AAAAAA",
+                          "content": "Línea Industrial",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SdldP",
+                          "fill": "#AAAAAA",
+                          "content": "Maquinaria Pesada",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "twUUv",
+                      "name": "fCol3",
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sKimX",
+                          "fill": "#FFFFFF",
+                          "content": "EMPRESA",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "800",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "eccaC",
+                          "fill": "#AAAAAA",
+                          "content": "Nosotros",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EzdSb",
+                          "fill": "#AAAAAA",
+                          "content": "Servicios",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Zsyvl",
+                          "fill": "#AAAAAA",
+                          "content": "Contacto",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "37WUY",
+                      "name": "fCol4",
+                      "layout": "vertical",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QRDZi",
+                          "fill": "#FFFFFF",
+                          "content": "CONTACTO",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "800",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "3eSE7",
+                          "fill": "#AAAAAA",
+                          "content": "ventas@neumaticos.com",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bnktI",
+                          "fill": "#AAAAAA",
+                          "content": "+52 (55) 1234 5678",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6m9dx",
+                          "fill": "#AAAAAA",
+                          "content": "Av. Industrial #123",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "gSsBX",
+              "fill": "#222222",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "k3SY9",
+              "name": "fBot",
+              "width": "fill_container",
+              "layout": "vertical",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jJsps",
+                  "fill": "#555555",
+                  "content": "© 2026 Neumáticos Agroindustriales. Todos los derechos reservados.",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

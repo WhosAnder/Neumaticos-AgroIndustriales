@@ -6,7 +6,7 @@ import { Facebook, MapPin, Phone, Mail } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white p-6 mt-8 w-full">
+    <footer className="bg-black text-white p-6 mt-0 w-full border-t border-gray-900">
       <div className="px-4 md:px-8 lg:px-16 xl:px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Company Info */}
