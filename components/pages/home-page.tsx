@@ -3,15 +3,11 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import Link from "next/link"
 import { Construction, Truck } from "lucide-react"
 import { FacebookFeed } from "@/components/pages/FacebookFeed"
 
-interface HomePageProps {
-  setCurrentPage: (page: string) => void
-  setSelectedCategory: (category: string) => void
-}
-
-export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps) {
+export function HomePage() {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
@@ -38,12 +34,11 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
             experiencia respaldando tu trabajo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg rounded-full"
-              onClick={() => setCurrentPage("categories")}
-            >
-              Explorar productos
-            </Button>
+            <Link href="/categorias">
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg rounded-full">
+                Explorar productos
+              </Button>
+            </Link>
             <Button
               className="bg-white border-white text-gray-800 hover:bg-gray-100 hover:text-gray-900 px-8 py-3 text-lg rounded-full"
               onClick={() =>
@@ -71,16 +66,14 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
                 <p className="text-gray-700 mb-4">
                   Diseñados para maximizar la tracción y minimizar la compactación del suelo en aplicaciones agrícolas.
                 </p>
-                <Button
-                  variant="outline"
-                  className="border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
-                  onClick={() => {
-                    setSelectedCategory("agricola")
-                    setCurrentPage("categories")
-                  }}
-                >
-                  Ver catálogo agrícola
-                </Button>
+                <Link href="/categorias/agricola">
+                  <Button
+                    variant="outline"
+                    className="border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
+                  >
+                    Ver catálogo agrícola
+                  </Button>
+                </Link>
               </div>
               <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-4 mb-4">
@@ -93,104 +86,25 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
                 <p className="text-gray-700 mb-4">
                   Resistentes y duraderos, ideales para las condiciones más exigentes en construcción e industria.
                 </p>
-                <Button
-                  variant="outline"
-                  className="border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
-                  onClick={() => {
-                    setSelectedCategory("industrial")
-                    setCurrentPage("categories")
-                  }}
-                >
-                  Ver catálogo industrial
-                </Button>
+                <Link href="/categorias/industrial">
+                  <Button
+                    variant="outline"
+                    className="border-red-600 text-red-600 hover:bg-red-50 bg-transparent"
+                  >
+                    Ver catálogo industrial
+                  </Button>
+                </Link>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Testimonials 
-        <Card className="bg-gray-50">
-          <CardContent className="p-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Lo que dicen nuestros clientes</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-red-600 font-bold">JM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Juan Martínez</h4>
-                    <p className="text-gray-600 text-sm">Agricultor - Finca El Progreso</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Excelente calidad y servicio. Los neumáticos han durado mucho más de lo esperado y el equipo siempre
-                  está disponible para asesorarme."
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-red-600 font-bold">CR</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Carlos Rodríguez</h4>
-                    <p className="text-gray-600 text-sm">Constructora Rodríguez S.A.</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 italic">
-                  "Proveedor confiable para nuestra flota de maquinaria pesada. Siempre cumplen con los tiempos de
-                  entrega y la calidad es excepcional."
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        */}
-
-        {/* Blog Section 
         <Card className="bg-white">
           <CardContent className="p-8">
             <h3 className="text-4xl font-bold text-gray-900 mb-8 text-center">Blog y noticias</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border-l-4 border-red-600 pl-4">
-                <h4 className="text-xl font-semibold mb-2">Mantenimiento de Neumáticos Agrícolas</h4>
-                <p className="text-gray-600 mb-3">
-                  Descubre las mejores prácticas para mantener tus neumáticos agrícolas en óptimas condiciones y
-                  extender su vida útil.
-                </p>
-                <span className="text-sm text-gray-500">15 de Noviembre, 2024</span>
-              </div>
-              <div className="border-l-4 border-red-600 pl-4">
-                <h4 className="text-xl font-semibold mb-2">Neumáticos para Construcción: Guía Completa</h4>
-                <p className="text-gray-600 mb-3">
-                  Todo lo que necesitas saber sobre la selección de neumáticos para maquinaria de construcción y
-                  minería.
-                </p>
-                <span className="text-sm text-gray-500">10 de Noviembre, 2024</span>
-              </div>
-              <div className="border-l-4 border-red-600 pl-4">
-                <h4 className="text-xl font-semibold mb-2">Nuevas Tecnologías en Neumáticos</h4>
-                <p className="text-gray-600 mb-3">
-                  Conoce las últimas innovaciones en tecnología de neumáticos que están revolucionando la industria.
-                </p>
-                <span className="text-sm text-gray-500">5 de Noviembre, 2024</span>
-              </div>
-            </div>
-            <div className="text-center mt-8">
-              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 bg-transparent">
-                Ver más artículos
-              </Button>
-            </div>
+            <FacebookFeed />
           </CardContent>
         </Card>
-        */}
-        <Card className="bg-white">
-        <CardContent className="p-8">
-          <h3 className="text-4xl font-bold text-gray-900 mb-8 text-center">Blog y noticias</h3>
-          <FacebookFeed />
-        </CardContent>
-      </Card>
 
         {/* CTA Section */}
         <Card className="bg-gradient-to-r from-gray-900 to-black text-white">
@@ -201,12 +115,11 @@ export function HomePage({ setCurrentPage, setSelectedCategory }: HomePageProps)
               Contáctanos hoy mismo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-3"
-                onClick={() => setCurrentPage("contact")}
-              >
-                Contactar ahora
-              </Button>
+              <Link href="/contacto">
+                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
+                  Contactar ahora
+                </Button>
+              </Link>
               <Button
                 className="bg-white border-white text-gray-800 hover:bg-gray-100 hover:text-gray-900 px-8 py-3"
                 onClick={() =>

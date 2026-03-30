@@ -1,62 +1,56 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
+import { getCategoryById, getMachineryById } from "@/lib/data"
 
-interface BreadcrumbProps {
-  currentPage: string
-  selectedCategory: string | null
-  selectedMachinery: string | null
-  setSelectedMachinery: (machinery: any) => void
-  setSelectedCategory: (category: any) => void
-  setCurrentPage: (page: string) => void
-  machineryByCategory: any
-}
+export function Breadcrumb() {
+  const pathname = usePathname()
 
-export function Breadcrumb({
-  currentPage,
-  selectedCategory,
-  selectedMachinery,
-  setSelectedMachinery,
-  setSelectedCategory,
-  setCurrentPage,
-  machineryByCategory,
-}: BreadcrumbProps) {
-  if (currentPage === "home") return null
+  if (pathname === "/") return null
+
+  const segments = pathname.split("/").filter(Boolean)
+
+  // Build the back link
+  const getBackHref = () => {
+    if (segments.length <= 1) return "/"
+    return "/" + segments.slice(0, -1).join("/")
+  }
+
+  // Build breadcrumb label
+  const getBreadcrumbLabel = () => {
+    if (segments[0] === "categorias") {
+      const categoryId = segments[1]
+      const machineryId = segments[2]
+
+      if (machineryId && categoryId) {
+        const category = getCategoryById(categoryId)
+        const machinery = getMachineryById(categoryId, machineryId)
+        return `${category?.name || categoryId} > ${machinery?.name || machineryId} > Neumáticos`
+      }
+      if (categoryId) {
+        const category = getCategoryById(categoryId)
+        return `${category?.name || categoryId} > Maquinarias`
+      }
+      return "Categorías"
+    }
+    if (segments[0] === "servicios") return "Servicios"
+    if (segments[0] === "contacto") return "Contacto"
+    return ""
+  }
 
   return (
-    <div className={`flex items-center gap-2 mb-6 ${currentPage === "home" ? "text-white" : "text-black"}`}>
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => {
-          if (selectedMachinery) {
-            setSelectedMachinery(null)
-          } else if (selectedCategory) {
-            setSelectedCategory(null)
-          } else {
-            setCurrentPage("home")
-          }
-        }}
-        className={`${currentPage === "home" ? "text-white hover:text-gray-300" : "text-black hover:text-gray-600"} p-0 h-auto`}
+    <div className="flex items-center gap-2 mb-6 text-black">
+      <Link
+        href={getBackHref()}
+        className="text-black hover:text-gray-600 p-0 h-auto inline-flex items-center text-sm font-medium"
       >
         <ArrowLeft className="w-4 h-4 mr-1" />
         Volver
-      </Button>
-      <span className={currentPage === "home" ? "text-gray-400" : "text-gray-500"}>|</span>
-      <span className={`text-sm ${currentPage === "home" ? "text-white" : "text-gray-700"}`}>
-        {selectedMachinery
-          ? `${selectedCategory?.charAt(0).toUpperCase() + selectedCategory?.slice(1)} > ${machineryByCategory[selectedCategory]?.find((m: any) => m.id === selectedMachinery)?.name} > Neumáticos`
-          : selectedCategory
-            ? `${selectedCategory?.charAt(0).toUpperCase() + selectedCategory?.slice(1)} > Maquinarias`
-            : currentPage === "categories"
-              ? "Categorías"
-              : currentPage === "services"
-                ? "Servicios"
-                : currentPage === "contact"
-                  ? "Contacto"
-                  : ""}
-      </span>
+      </Link>
+      <span className="text-gray-500">|</span>
+      <span className="text-sm text-gray-700">{getBreadcrumbLabel()}</span>
     </div>
   )
 }
