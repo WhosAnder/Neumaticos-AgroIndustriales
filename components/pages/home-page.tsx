@@ -25,16 +25,16 @@ export function HomePage() {
           <p className="text-lg lg:text-xl font-normal text-gray-300 leading-relaxed max-w-3xl">
             Soluciones integrales, robustas y duraderas para tractores, cosechadoras, montacargas, camiones y maquinaria pesada.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
               href="/contacto"
-              className="bg-[#D32F2F] hover:bg-[#b92828] text-white text-base font-semibold px-8 py-4 rounded-none transition-colors flex items-center justify-center"
+              className="bg-[#D32F2F] hover:bg-[#b92828] text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg shadow-red-900/40 hover:shadow-red-900/60 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center"
             >
               Solicitar cotización
             </Link>
             <Link
               href="/categorias"
-              className="bg-[#333333] hover:bg-[#222222] text-white text-base font-semibold px-8 py-4 rounded-none transition-colors flex items-center justify-center"
+              className="bg-[#333333] hover:bg-[#222222] text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg shadow-black/40 hover:shadow-black/60 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center"
             >
               Ver catálogo
             </Link>
@@ -112,7 +112,7 @@ export function HomePage() {
                 </p>
                 <Link
                   href="/categorias/agricola"
-                  className="bg-[#D32F2F] hover:bg-[#b92828] transition-colors rounded-none px-8 py-3 text-white font-semibold flex justify-center items-center mt-4"
+                  className="bg-[#D32F2F] hover:bg-[#b92828] text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center mt-4"
                 >
                   Explorar catálogo agrícola <span className="ml-2">→</span>
                 </Link>
@@ -137,7 +137,7 @@ export function HomePage() {
                 </p>
                 <Link
                   href="/categorias/industrial"
-                  className="bg-[#D32F2F] hover:bg-[#b92828] transition-colors rounded-none px-8 py-3 text-white font-semibold flex justify-center items-center mt-4"
+                  className="bg-[#D32F2F] hover:bg-[#b92828] text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center mt-4"
                 >
                   Explorar catálogo industrial <span className="ml-2">→</span>
                 </Link>
@@ -266,16 +266,16 @@ export function HomePage() {
         <p className="text-gray-400 text-lg text-center max-w-2xl mb-10">
           Nuestros expertos están listos para recomendarte la solución ideal para tus equipos.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row gap-6 mb-8 mt-4">
           <Link
             href="/contacto"
-            className="bg-[#D32F2F] hover:bg-[#b92828] transition-colors rounded-none px-10 py-4 text-sm font-bold text-white uppercase tracking-wider flex justify-center items-center"
+            className="bg-[#D32F2F] hover:bg-[#b92828] text-white text-base font-bold px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg shadow-red-900/30 hover:shadow-red-900/50 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center"
           >
             Contactar ahora
           </Link>
           <button
             onClick={() => window.open("https://wa.me/2221283294?text=Hola", "_blank")}
-            className="bg-[#25D366] hover:bg-[#20bd5a] transition-colors rounded-none px-10 py-4 text-sm font-bold text-white uppercase tracking-wider flex justify-center items-center"
+            className="bg-[#25D366] hover:bg-[#20bd5a] text-white text-base font-bold px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center"
           >
             WhatsApp
           </button>
