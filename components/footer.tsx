@@ -33,11 +33,11 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-red-500" />
-                <span className="text-gray-400">+52 (222) 128-3294</span>
+                <span className="text-gray-400">+52 222 563 7019</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-red-500" />
-                <span className="text-gray-400">gfa_ww@outlook.com</span>
+                <span className="text-gray-400">contacto@nei.com</span>
               </div>
             </div>
           </div>

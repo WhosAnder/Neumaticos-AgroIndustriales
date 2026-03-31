@@ -292,7 +292,7 @@ export function HomePage() {
             Contactar ahora
           </Link>
           <button
-            onClick={() => window.open("https://wa.me/2221283294?text=Hola", "_blank")}
+            onClick={() => window.open("https://wa.me/522225637019?text=Hola", "_blank")}
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white text-base font-bold px-10 py-4 rounded-xl uppercase tracking-wider shadow-lg shadow-green-900/20 hover:shadow-green-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center"
           >
             WhatsApp

@@ -21,11 +21,11 @@ export default function ContactoPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-red-600" />
-                  <span>+52 (222) 128-3294</span>
+                  <span>+52 222 563 7019</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-red-600" />
-                  <span>gfa_ww@outlook.com</span>
+                  <span>contacto@nei.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Facebook className="w-5 h-5 text-red-600" />

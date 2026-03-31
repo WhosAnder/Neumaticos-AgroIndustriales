@@ -183,7 +183,7 @@ export function Header() {
                 {/* 1. Acción Principal: WhatsApp */}
                 <button 
                   onClick={() => {
-                    window.open("https://wa.me/2221283294?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20para%20neumáticos.", "_blank")
+                    window.open("https://wa.me/522225637019?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20para%20neumáticos.", "_blank")
                     setIsModalOpen(false)
                   }}
                   className="group w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-base md:text-lg font-bold p-4 md:p-5 rounded-xl shadow-lg hover:shadow-green-900/20 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-between"
@@ -198,7 +198,7 @@ export function Header() {
                 {/* 2. Acción Secundaria: Llamada Directa */}
                 <button 
                   onClick={() => {
-                    window.open("tel:2221283294", "_self")
+                    window.open("tel:522225637019", "_self")
                     setIsModalOpen(false)
                   }}
                   className="group w-full bg-white border-2 border-gray-200 hover:border-black text-black text-sm md:text-base font-bold p-4 rounded-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-between"

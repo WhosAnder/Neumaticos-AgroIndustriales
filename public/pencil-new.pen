@@ -5,11 +5,11 @@
       "type": "frame",
       "id": "bi8Au",
       "x": 0,
-      "y": -118,
+      "y": 796,
       "name": "Landing Page",
       "clip": true,
-      "width": 3457,
-      "height": 5439,
+      "width": 4827,
+      "height": 4525,
       "fill": "#FFFFFF",
       "layout": "vertical",
       "children": [
@@ -189,7 +189,8 @@
                   "lineHeight": 1.5,
                   "textAlign": "center",
                   "fontFamily": "Inter",
-                  "fontSize": 26
+                  "fontSize": 26,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
