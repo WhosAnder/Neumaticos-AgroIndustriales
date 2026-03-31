@@ -68,10 +68,10 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-lg px-6 py-2 font-medium inline-flex items-center justify-center text-sm ${
+                className={`px-4 py-2 font-bold inline-flex items-center justify-center text-base tracking-wide transition-colors ${
                   isActive(item.href)
-                    ? "bg-black text-white"
-                    : "bg-white text-black hover:bg-gray-100"
+                    ? "text-[#D32F2F]"
+                    : "text-gray-800 hover:text-[#D32F2F]"
                 }`}
               >
                 {item.label}
@@ -96,10 +96,10 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`rounded-lg px-6 py-3 font-medium text-left ${
+                className={`rounded-lg px-6 py-3 font-bold text-left text-base transition-colors ${
                   isActive(item.href)
-                    ? "bg-black text-white"
-                    : "bg-white text-black hover:bg-gray-100"
+                    ? "text-[#D32F2F] bg-red-50"
+                    : "text-gray-800 hover:text-[#D32F2F] hover:bg-gray-50"
                 }`}
               >
                 {item.label}
@@ -125,15 +125,15 @@ export function Header() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-200"
           onClick={() => setIsModalOpen(false)}
         >
-          {/* Contenedor Flex Dos Columnas */}
+          {/* Contenedor Flex Dos Columnas con Scroll interno en pantallas pequeñas */}
           <div 
-            className="w-full max-w-[850px] flex flex-col md:flex-row shadow-2xl rounded-2xl overflow-hidden animate-in zoom-in-95 duration-200 border border-gray-800"
+            className="w-full max-w-[850px] max-h-[95vh] overflow-y-auto flex flex-col md:flex-row shadow-2xl rounded-2xl animate-in zoom-in-95 duration-200 border border-gray-800"
             onClick={(e) => e.stopPropagation()} 
             role="dialog"
             aria-modal="true"
           >
-            {/* ── Panel Izquierdo Oscuro (Promesa de Marca) ── */}
-            <div className="md:w-2/5 md:min-h-[480px] bg-[#0A0A0A] p-8 md:p-12 flex flex-col justify-between relative overflow-hidden group">
+            {/* ── Panel Izquierdo Oscuro (Promesa de Marca) - Oculto en Móvil ── */}
+            <div className="hidden md:flex md:w-2/5 md:min-h-[480px] bg-[#0A0A0A] p-8 md:p-12 flex-col justify-between relative overflow-hidden group">
               {/* Patrón Grid de fondo (Estilo industrial) */}
               <div 
                 className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-700" 
@@ -158,7 +158,7 @@ export function Header() {
             </div>
 
             {/* ── Panel Derecho Blanco (Acciones UI) ── */}
-            <div className="md:w-3/5 bg-white p-8 md:p-12 relative flex flex-col justify-center">
+            <div className="w-full md:w-3/5 bg-white p-6 sm:p-8 md:p-12 relative flex flex-col justify-center">
               {/* Botón Cerrar "X" Absoluto */}
               <button 
                 onClick={() => setIsModalOpen(false)}

@@ -158,15 +158,33 @@ export function HomePage() {
           </h2>
 
           <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="bg-[#151515] w-full aspect-video rounded-none flex items-center justify-center p-6 border border-gray-800/50 hover:border-gray-700 hover:bg-[#1A1A1A] transition-all relative group cursor-pointer">
-                {/* 
-                  Aquí puedes agregar el Logo de la marca:
-                  <Image src={`/images/marcas/marca-${i}.png`} alt={`Marca ${i}`} fill className="object-contain p-4 opacity-70 group-hover:opacity-100 transition-opacity" />
-                */}
-                <span className="text-gray-700 text-sm font-bold uppercase tracking-widest text-center group-hover:text-gray-500 transition-colors">
-                  ESPACIO PARA<br />MARCA {i}
-                </span>
+            {[
+              { id: "pirelli", name: "Pirelli", src: "/images/marcas/pirelli.png" },
+              { id: "seba", name: "SEBA", src: "/images/marcas/seba.png" },
+              { id: "goodyear", name: "Goodyear", src: "/images/marcas/goodyear.png" },
+              { id: "eurogrip", name: "Eurogrip", src: "/images/marcas/eurogrip.png" },
+              { id: "samson", name: "Samson", src: "/images/marcas/samson.png" },
+              { id: "galaxy", name: "Galaxy", src: "/images/marcas/galaxy.png" },
+              { id: "numa", name: "Numa", src: "/images/marcas/numa.png" },
+            ].map((marca) => (
+              <div key={marca.id} className="flex flex-col bg-white rounded-xl overflow-hidden border border-gray-800 hover:border-[#D32F2F] hover:-translate-y-2 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-red-900/10">
+                <div className="relative w-full aspect-video flex-1 p-6 flex items-center justify-center bg-white">
+                  {marca.src ? (
+                    <Image 
+                      src={marca.src} 
+                      alt={`Logo ${marca.name}`} 
+                      fill 
+                      className="object-contain p-5 group-hover:scale-110 transition-transform duration-500" 
+                    />
+                  ) : (
+                    <span className="text-gray-400 text-xs font-bold uppercase tracking-widest text-center">
+                      PENDIENTE
+                    </span>
+                  )}
+                </div>
+                <div className="bg-[#0A0A0A] p-4 text-center border-t border-gray-200">
+                  <span className="text-white text-sm font-black uppercase tracking-widest group-hover:text-[#D32F2F] transition-colors">{marca.name}</span>
+                </div>
               </div>
             ))}
           </div>
