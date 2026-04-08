@@ -1,12 +1,21 @@
+/**
+ * Tipos del dominio — usados por los componentes de la UI.
+ *
+ * Nota: Son distintos de ApiTypes (api-types.ts) que reflejan la respuesta cruda de nei-api.
+ * Los mappers en utils.ts transforman ApiType → Type.
+ * La diferencia principal: `id` en Category y Machinery usa el `slug` (string) como identificador
+ * para la navegación por URL, mientras que en los datos de la API es un número autoincremental.
+ */
+
 export interface Category {
-  id: string
+  id: string        // slug — usado como parámetro de URL
   nombre: string
   descripcion: string
   imagen_url: string
 }
 
 export interface Machinery {
-  id: string
+  id: string        // slug — usado como parámetro de URL
   nombre: string
   icono_nombre: string
   imagen_url: string
@@ -22,7 +31,7 @@ export interface Tire {
   imagen_url: string
   marca_id: number
   maquinaria_id: number
-  marca_nombre?: string
+  marca_nombre?: string  // resuelto en el cliente vía join con Brand
 }
 
 export interface Brand {
