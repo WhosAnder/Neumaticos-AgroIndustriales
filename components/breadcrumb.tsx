@@ -3,35 +3,31 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
-import { getCategoryById, getMachineryById } from "@/lib/data"
 
-export function Breadcrumb() {
+interface BreadcrumbProps {
+  categoryName?: string
+  machineryName?: string
+}
+
+export function Breadcrumb({ categoryName, machineryName }: BreadcrumbProps) {
   const pathname = usePathname()
 
   if (pathname === "/") return null
 
   const segments = pathname.split("/").filter(Boolean)
 
-  // Build the back link
   const getBackHref = () => {
     if (segments.length <= 1) return "/"
     return "/" + segments.slice(0, -1).join("/")
   }
 
-  // Build breadcrumb label
   const getBreadcrumbLabel = () => {
     if (segments[0] === "categorias") {
-      const categoryId = segments[1]
-      const machineryId = segments[2]
-
-      if (machineryId && categoryId) {
-        const category = getCategoryById(categoryId)
-        const machinery = getMachineryById(categoryId, machineryId)
-        return `${category?.name || categoryId} > ${machinery?.name || machineryId} > Neumáticos`
+      if (machineryName && categoryName) {
+        return `${categoryName} > ${machineryName} > Neumáticos`
       }
-      if (categoryId) {
-        const category = getCategoryById(categoryId)
-        return `${category?.name || categoryId} > Maquinarias`
+      if (categoryName) {
+        return `${categoryName} > Maquinarias`
       }
       return "Categorías"
     }

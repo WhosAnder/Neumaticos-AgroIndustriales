@@ -1,4 +1,5 @@
-import { getTiresByMachinery, getMachineryById, getCategoryById, getAllMachineryParams } from "@/lib/data"
+import { fetchCategories, fetchMachineryByCategory, fetchTiresByMachinery, fetchBrands } from "@/lib/api"
+import { mapCategory, mapMachinery, mapTire } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,48 +9,56 @@ import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { notFound } from "next/navigation"
 
+export const dynamic = "force-dynamic"
+
 interface PageProps {
   params: Promise<{ categoryId: string; machineryId: string }>
 }
 
-export function generateStaticParams() {
-  return getAllMachineryParams()
-}
-
 export default async function TiresPage({ params }: PageProps) {
   const { categoryId, machineryId } = await params
-  const category = getCategoryById(categoryId)
-  const machinery = getMachineryById(categoryId, machineryId)
+  
+  const [categories, machinery, tires, brands] = await Promise.all([
+    fetchCategories(),
+    fetchMachineryByCategory(categoryId),
+    fetchTiresByMachinery(machineryId),
+    fetchBrands()
+  ])
 
-  if (!category || !machinery) {
+  const category = categories.find(c => c.slug === categoryId)
+  const machine = machinery.find(m => m.slug === machineryId)
+
+  if (!category || !machine) {
     notFound()
   }
 
-  const tires = getTiresByMachinery(machineryId)
+  const mappedCategory = mapCategory(category)
+  const mappedMachinery = mapMachinery(machine)
+  const mappedTires = tires.map(t => mapTire(t, brands))
 
   return (
     <div className="px-4 py-6 md:px-8 lg:px-16 xl:px-24">
-      <Breadcrumb />
+      <Breadcrumb categoryName={mappedCategory.nombre} machineryName={mappedMachinery.nombre} />
       <div className="space-y-6">
-        <h2 className="text-3xl font-bold text-black text-center mb-8">Neumáticos para {machinery.name}</h2>
+        <h2 className="text-3xl font-bold text-black text-center mb-8">Neumáticos para {mappedMachinery.nombre}</h2>
 
         <div className="space-y-4">
-          {tires.map((tire) => (
+          {mappedTires.map((tire) => (
             <Card key={tire.id} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-4 flex items-center gap-4">
                 <Image
-                  src={tire.image || "/placeholder.svg"}
-                  alt={tire.name}
+                  src={tire.imagen_url || "/placeholder.svg"}
+                  alt={tire.nombre}
                   width={80}
                   height={80}
                   className="rounded-lg bg-gray-100"
                 />
                 <div className="flex-1">
-                  <h4 className="font-semibold text-lg mb-1">{tire.name}</h4>
-                  <p className="text-gray-600 mb-1">{tire.brand}</p>
+                  <h4 className="font-semibold text-lg mb-1">{tire.nombre}</h4>
+                  <p className="text-gray-600 mb-1">{tire.marca_nombre}</p>
                   <div className="flex gap-2 mb-2">
-                    <Badge variant="secondary">{tire.size}</Badge>
-                    <Badge variant="outline">{tire.pattern}</Badge>
+                    <Badge variant="secondary">{tire.medida}</Badge>
+                    <Badge variant="outline">{tire.patron}</Badge>
                   </div>
                   <div className="flex items-center justify-end">
                     <Button variant="link" className="text-red-600 p-0 h-auto font-semibold">
@@ -62,7 +71,7 @@ export default async function TiresPage({ params }: PageProps) {
           ))}
         </div>
 
-        {tires.length === 0 && (
+        {mappedTires.length === 0 && (
           <Card>
             <CardContent className="p-8 text-center">
               <p className="text-gray-600">No hay neumáticos disponibles para esta maquinaria en este momento.</p>

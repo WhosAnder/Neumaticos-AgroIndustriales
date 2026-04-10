@@ -2,8 +2,14 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { ApiBrand, ApiCategory } from "@/lib/api-types"
 
-export function HomePage() {
+interface HomePageProps {
+  brands: ApiBrand[]
+  categories: ApiCategory[]
+}
+
+export function HomePage({ brands, categories }: HomePageProps) {
   return (
     <main className="w-full flex flex-col font-sans">
       
@@ -93,56 +99,31 @@ export function HomePage() {
           </p>
 
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
-            {/* Agrícola */}
-            <div className="bg-[#151515] flex flex-col w-full rounded-none">
-              <div className="relative w-full h-[300px] bg-[#1A1A1A] border-b border-gray-800 flex items-center justify-center overflow-hidden">
-                {/* Checkered pattern to replicate the image top half */}
-                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                <Image
-                  src="/images/agricultural-machinery-new.png"
-                  alt="Neumáticos Agrícolas"
-                  fill
-                  className="object-cover object-center opacity-70"
-                />
+            {categories.map((category) => (
+              <div key={category.id} className="bg-[#151515] flex flex-col w-full rounded-none">
+                <div className="relative w-full h-[300px] bg-[#1A1A1A] border-b border-gray-800 flex items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+                  <Image
+                    src={category.imagen_url || "/placeholder.svg"}
+                    alt={`Neumáticos ${category.nombre}`}
+                    fill
+                    className="object-cover object-center opacity-70"
+                  />
+                </div>
+                <div className="flex flex-col items-start p-10 lg:p-14 gap-6">
+                  <h3 className="text-white text-2xl lg:text-3xl font-bold">Neumáticos {category.nombre}</h3>
+                  <p className="text-gray-400 text-base leading-relaxed h-16">
+                    {category.descripcion}
+                  </p>
+                  <Link
+                    href={`/categorias/${category.slug}`}
+                    className="bg-[#D32F2F] hover:bg-[#b92828] text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center mt-4"
+                  >
+                    Explorar catálogo {category.nombre.toLowerCase()} <span className="ml-2">→</span>
+                  </Link>
+                </div>
               </div>
-              <div className="flex flex-col items-start p-10 lg:p-14 gap-6">
-                <h3 className="text-white text-2xl lg:text-3xl font-bold">Neumáticos Agrícolas</h3>
-                <p className="text-gray-400 text-base leading-relaxed">
-                  Maximiza la tracción y minimiza la compactación del suelo. Diseñados para prolongar la vida útil de tractores y equipos de cosecha pesados.
-                </p>
-                <Link
-                  href="/categorias/agricola"
-                  className="bg-[#D32F2F] hover:bg-[#b92828] text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center mt-4"
-                >
-                  Explorar catálogo agrícola <span className="ml-2">→</span>
-                </Link>
-              </div>
-            </div>
-            
-            {/* Industrial */}
-            <div className="bg-[#151515] flex flex-col w-full rounded-none">
-              <div className="relative w-full h-[300px] bg-[#1A1A1A] border-b border-gray-800 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
-                <Image
-                  src="/images/industrial-machinery.png"
-                  alt="Neumáticos Industriales"
-                  fill
-                  className="object-cover object-center opacity-70"
-                />
-              </div>
-              <div className="flex flex-col items-start p-10 lg:p-14 gap-6">
-                <h3 className="text-white text-2xl lg:text-3xl font-bold">Neumáticos Industriales</h3>
-                <p className="text-gray-400 text-base leading-relaxed">
-                  Resistencia superior a cortes y desgaste para las condiciones más exigentes en construcción, minería y logística pesada.
-                </p>
-                <Link
-                  href="/categorias/industrial"
-                  className="bg-[#D32F2F] hover:bg-[#b92828] text-white font-bold px-8 py-3 rounded-xl shadow-lg shadow-red-900/20 hover:shadow-red-900/40 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex justify-center items-center mt-4"
-                >
-                  Explorar catálogo industrial <span className="ml-2">→</span>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -158,21 +139,13 @@ export function HomePage() {
           </h2>
 
           <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
-            {[
-              { id: "pirelli", name: "Pirelli", src: "/images/marcas/pirelli.png" },
-              { id: "seba", name: "SEBA", src: "/images/marcas/seba.png" },
-              { id: "goodyear", name: "Goodyear", src: "/images/marcas/goodyear.png" },
-              { id: "eurogrip", name: "Eurogrip", src: "/images/marcas/eurogrip.png" },
-              { id: "samson", name: "Samson", src: "/images/marcas/samson.png" },
-              { id: "galaxy", name: "Galaxy", src: "/images/marcas/galaxy.png" },
-              { id: "numa", name: "Numa", src: "/images/marcas/numa.png" },
-            ].map((marca) => (
+            {brands.map((marca) => (
               <div key={marca.id} className="flex flex-col bg-white rounded-xl overflow-hidden border border-gray-800 hover:border-[#D32F2F] hover:-translate-y-2 transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-red-900/10">
                 <div className="relative w-full aspect-video flex-1 p-6 flex items-center justify-center bg-white">
-                  {marca.src ? (
+                  {marca.logo_url ? (
                     <Image 
-                      src={marca.src} 
-                      alt={`Logo ${marca.name}`} 
+                      src={marca.logo_url} 
+                      alt={`Logo ${marca.nombre}`} 
                       fill 
                       className="object-contain p-5 group-hover:scale-110 transition-transform duration-500" 
                     />
@@ -183,7 +156,7 @@ export function HomePage() {
                   )}
                 </div>
                 <div className="bg-[#0A0A0A] p-4 text-center border-t border-gray-200">
-                  <span className="text-white text-sm font-black uppercase tracking-widest group-hover:text-[#D32F2F] transition-colors">{marca.name}</span>
+                  <span className="text-white text-sm font-black uppercase tracking-widest group-hover:text-[#D32F2F] transition-colors">{marca.nombre}</span>
                 </div>
               </div>
             ))}
