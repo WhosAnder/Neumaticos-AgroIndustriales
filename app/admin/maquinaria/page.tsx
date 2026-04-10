@@ -7,7 +7,7 @@ import {
 } from "@/lib/admin-api"
 import {
   fetchCategories as fetchPublicCategories,
-  fetchMachineryByCategory as fetchPublicMachineryByCategory,
+  fetchMachinery as fetchPublicMachinery,
 } from "@/lib/api"
 import {
   frontendFallbackCategories,
@@ -31,11 +31,8 @@ export default async function AdminMaquinariaPage() {
     categories = frontendFallbackCategories
   }
 
-  if (machinery.length === 0 && categories.length > 0) {
-    const machineryByCategory = await Promise.all(
-      categories.map((category) => fetchPublicMachineryByCategory(category.slug).catch(() => []))
-    )
-    machinery = machineryByCategory.flat()
+  if (machinery.length === 0) {
+    machinery = await fetchPublicMachinery().catch(() => [])
   }
 
   if (machinery.length === 0) {

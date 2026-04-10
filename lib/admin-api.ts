@@ -2,6 +2,7 @@
 
 import { cookies } from "next/headers"
 import { headers } from "next/headers"
+import { revalidateTag } from "next/cache"
 import { createHash } from "crypto"
 import { Pool } from "pg"
 import { createAdminApiToken } from "@/lib/admin-jwt"
@@ -140,6 +141,10 @@ export async function adminFetch<T>(
     throw new Error(error.error || `API Error: ${res.status}`)
   }
 
+  if (options.method && ["POST", "PUT", "DELETE"].includes(options.method.toUpperCase())) {
+    revalidateTag("catalog")
+  }
+
   return res.json()
 }
 
@@ -260,13 +265,7 @@ export async function getCategories(): Promise<AdminCategory[]> {
 
 export async function getMachinery(): Promise<AdminMachinery[]> {
   try {
-    const categories = await getCategories()
-    const allMachinery: AdminMachinery[] = []
-    for (const cat of categories) {
-      const machinery = await adminFetch<AdminMachinery[]>(`/categorias/${cat.slug}/maquinaria`)
-      allMachinery.push(...machinery)
-    }
-    return allMachinery
+    return await adminFetch<AdminMachinery[]>("/maquinaria")
   } catch (error) {
     if (ALLOW_LOCAL_DB_FALLBACK && isApiUnavailableError(error)) {
       return localGetMachinery()
@@ -277,15 +276,7 @@ export async function getMachinery(): Promise<AdminMachinery[]> {
 
 export async function getTires(): Promise<AdminTire[]> {
   try {
-    const machinery = await getMachinery()
-    const allTires: AdminTire[] = []
-
-    for (const machine of machinery) {
-      const tires = await adminFetch<AdminTire[]>(`/maquinaria/${machine.slug}/neumaticos`)
-      allTires.push(...tires)
-    }
-
-    return allTires
+    return await adminFetch<AdminTire[]>("/neumaticos")
   } catch (error) {
     if (ALLOW_LOCAL_DB_FALLBACK && isApiUnavailableError(error)) {
       return localGetTires()

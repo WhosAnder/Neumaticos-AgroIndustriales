@@ -1,8 +1,8 @@
 import {
   fetchBrands,
   fetchCategories,
-  fetchMachineryByCategory,
-  fetchTiresByMachinery,
+  fetchMachinery,
+  fetchTires,
 } from "@/lib/api"
 import {
   frontendFallbackBrands,
@@ -28,20 +28,14 @@ export default async function AdminDashboard() {
   }
 
   if (machinery.length === 0) {
-    const publicMachinery = await Promise.all(
-      categories.map((category) => fetchMachineryByCategory(category.slug).catch(() => []))
-    )
-    machinery = publicMachinery.flat()
+    machinery = await fetchMachinery().catch(() => [])
   }
   if (machinery.length === 0) {
     machinery = frontendFallbackMachinery
   }
 
   if (tires.length === 0) {
-    const publicTires = await Promise.all(
-      machinery.map((machine) => fetchTiresByMachinery(machine.slug).catch(() => []))
-    )
-    tires = publicTires.flat()
+    tires = await fetchTires().catch(() => [])
   }
   if (tires.length === 0) {
     tires = frontendFallbackTires

@@ -14,7 +14,7 @@ async function fetchAPI<T>(endpoint: string): Promise<T> {
 
   try {
     res = await fetch(`${API_URL}${endpoint}`, {
-      next: { revalidate: REVALIDATE },
+      next: { revalidate: REVALIDATE, tags: ["catalog"] },
     })
   } catch (cause) {
     const error = new Error(
@@ -41,10 +41,18 @@ export async function fetchMachineryByCategory(
   return fetchAPI<ApiMachinery[]>(`/categorias/${categorySlug}/maquinaria`)
 }
 
+export async function fetchMachinery(): Promise<ApiMachinery[]> {
+  return fetchAPI<ApiMachinery[]>("/maquinaria")
+}
+
 export async function fetchTiresByMachinery(
   machinerySlug: string
 ): Promise<ApiTire[]> {
   return fetchAPI<ApiTire[]>(`/maquinaria/${machinerySlug}/neumaticos`)
+}
+
+export async function fetchTires(): Promise<ApiTire[]> {
+  return fetchAPI<ApiTire[]>("/neumaticos")
 }
 
 export async function fetchBrands(): Promise<ApiBrand[]> {

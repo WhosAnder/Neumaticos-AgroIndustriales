@@ -8,9 +8,8 @@ import {
 } from "@/lib/admin-api"
 import {
   fetchBrands as fetchPublicBrands,
-  fetchCategories as fetchPublicCategories,
-  fetchMachineryByCategory as fetchPublicMachineryByCategory,
-  fetchTiresByMachinery as fetchPublicTiresByMachinery,
+  fetchMachinery as fetchPublicMachinery,
+  fetchTires as fetchPublicTires,
 } from "@/lib/api"
 import {
   frontendFallbackBrands,
@@ -38,25 +37,15 @@ export default async function AdminNeumaticosPage() {
   }
 
   if (machinery.length === 0) {
-    let categories = await fetchPublicCategories().catch(() => [])
-    if (categories.length === 0) {
-      categories = frontendFallbackCategories
-    }
-    const machineryByCategory = await Promise.all(
-      categories.map((category) => fetchPublicMachineryByCategory(category.slug).catch(() => []))
-    )
-    machinery = machineryByCategory.flat()
+    machinery = await fetchPublicMachinery().catch(() => [])
   }
 
   if (machinery.length === 0) {
     machinery = frontendFallbackMachinery
   }
 
-  if (tires.length === 0 && machinery.length > 0) {
-    const tiresByMachinery = await Promise.all(
-      machinery.map((machine) => fetchPublicTiresByMachinery(machine.slug).catch(() => []))
-    )
-    tires = tiresByMachinery.flat()
+  if (tires.length === 0) {
+    tires = await fetchPublicTires().catch(() => [])
   }
 
   if (tires.length === 0) {
