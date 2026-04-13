@@ -153,7 +153,7 @@ export function AdminCRUDTable({
             </Button>
             <Button
               variant="destructive"
-              onClick={() => deleteOpen && handleDelete(deleteOpen)}
+              onClick={() => deleteOpen !== null && handleDelete(deleteOpen)}
             >
               Eliminar
             </Button>
