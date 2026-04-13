@@ -20,6 +20,7 @@ interface AdminSidebarProps {
     email: string
     image?: string | null
   }
+  className?: string
 }
 
 const navigation = [
@@ -30,7 +31,7 @@ const navigation = [
   { name: "Marcas", href: "/admin/marcas", icon: Tag },
 ]
 
-export function AdminSidebar({ user }: AdminSidebarProps) {
+export function AdminSidebar({ user, className }: AdminSidebarProps) {
   const pathname = usePathname()
   const router = useRouter()
 
@@ -41,7 +42,7 @@ export function AdminSidebar({ user }: AdminSidebarProps) {
   }
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
+    <aside className={cn("bg-white border-r border-gray-200 flex flex-col", className)}>
       <div className="p-6 border-b border-gray-200">
         <h1 className="text-xl font-bold text-gray-900">Admin Panel</h1>
         <p className="text-sm text-gray-500 mt-1">{user.email}</p>
