@@ -25,7 +25,8 @@ export function HomePage({ brands, categories }: HomePageProps) {
         {/* Overlay idéntico al pencil, gradient or solid dark */}
         <div className="absolute inset-0 bg-black/75 flex flex-col items-center justify-center gap-6 px-6 lg:px-20 text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight max-w-4xl tracking-tight">
-            Neumáticos agrícolas e industriales<br className="hidden lg:block" />
+            Neumáticos agrícolas e industriales{" "}
+            <br className="hidden lg:block" />
             para trabajo pesado.
           </h1>
           <p className="text-lg lg:text-xl font-normal text-gray-300 leading-relaxed max-w-3xl">
