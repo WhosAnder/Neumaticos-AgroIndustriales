@@ -27,7 +27,7 @@ export function HomePage({ brands, categories }: HomePageProps) {
           <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight max-w-4xl tracking-tight">
             Neumáticos agrícolas e industriales{" "}
             <br className="hidden lg:block" />
-            para trabajo pesado.
+            para trabajo pesado
           </h1>
           <p className="text-lg lg:text-xl font-normal text-gray-300 leading-relaxed max-w-3xl">
             Soluciones integrales, robustas y duraderas para tractores, cosechadoras, montacargas, camiones y maquinaria pesada.

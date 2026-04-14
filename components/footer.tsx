@@ -45,14 +45,23 @@ export function Footer() {
           {/* Social Media */}
           <div>
             <h4 className="font-semibold mb-4">Síguenos</h4>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-3">
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-14 w-14 text-gray-400 hover:text-white hover:bg-red-600"
+                onClick={() => window.open("https://www.facebook.com/NeumaticosAgricolaseIndustriales/", "_blank")}
               >
                 <Facebook className="h-15 w-15" />
               </Button>
+              <a
+                href="https://www.facebook.com/NeumaticosAgricolaseIndustriales/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
+                Neumáticos Agro Industriales
+              </a>
             </div>
           </div>
         </div>
