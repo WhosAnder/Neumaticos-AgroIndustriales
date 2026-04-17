@@ -12,7 +12,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <Image
-              src="/images/logo-horizontal-new.webp"
+              src="/images/logo-horizontal-new.png"
               alt="Neumáticos Agroindustriales"
               width={200}
               height={0}

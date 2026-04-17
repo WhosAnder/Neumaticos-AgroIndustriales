@@ -16,7 +16,7 @@ export function HomePage({ brands, categories }: HomePageProps) {
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[600px] lg:h-[700px] flex flex-col justify-center overflow-hidden">
         <Image
-          src="/images/hero-background.webp"
+          src="/images/hero-background.png"
           alt="Neumáticos agrícolas e industriales para trabajo pesado."
           fill
           priority

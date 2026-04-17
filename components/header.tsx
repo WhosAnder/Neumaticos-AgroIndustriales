@@ -51,7 +51,7 @@ export function Header() {
         <div className="flex items-center gap-3 px-4 md:px-8 lg:px-16 xl:px-24">
           <Link href="/" className="focus:outline-none">
             <Image
-              src="/images/logo-horizontal.webp"
+              src="/images/logo-horizontal.png"
               alt="Neumáticos Agroindustriales Logo"
               width={280}
               height={80}
