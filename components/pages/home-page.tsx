@@ -16,7 +16,7 @@ export function HomePage({ brands, categories }: HomePageProps) {
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="relative w-full h-[600px] lg:h-[700px] flex flex-col justify-center overflow-hidden">
         <Image
-          src="/images/hero-background.png"
+          src="/images/hero-background.webp"
           alt="Neumáticos agrícolas e industriales para trabajo pesado."
           fill
           priority
@@ -33,12 +33,14 @@ export function HomePage({ brands, categories }: HomePageProps) {
             Soluciones integrales, robustas y duraderas para tractores, cosechadoras, montacargas, camiones y maquinaria pesada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Link
-              href="/contacto"
+            <a
+              href="https://wa.me/522225637019?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n.%20%C2%BFMe%20pueden%20ayudar%3F"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#D32F2F] hover:bg-[#b92828] text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg shadow-red-900/40 hover:shadow-red-900/60 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center"
             >
               Solicitar cotización
-            </Link>
+            </a>
             <Link
               href="/categorias"
               className="bg-[#333333] hover:bg-[#222222] text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg shadow-black/40 hover:shadow-black/60 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 flex items-center justify-center"
