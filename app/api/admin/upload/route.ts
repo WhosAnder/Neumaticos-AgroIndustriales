@@ -3,6 +3,7 @@ import { mkdir, writeFile } from "fs/promises"
 import { join } from "path"
 import { auth } from "@/lib/auth"
 import { NextResponse } from "next/server"
+import sharp from "sharp"
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024
 const ALLOWED_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif", "image/svg+xml"])
@@ -32,13 +33,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "File too large" }, { status: 400 })
   }
 
-  const ext = file.name.includes(".") ? file.name.split(".").pop() : "png"
+  const isSvg = file.type === "image/svg+xml"
   const safeFolder = folder.replace(/[^a-zA-Z0-9/_-]/g, "")
   const relativeDir = join("images", safeFolder)
   const uploadDir = join(process.cwd(), "public", relativeDir)
+  const ext = isSvg ? "svg" : "webp"
   const filename = `${randomUUID()}.${ext}`
   const filePath = join(uploadDir, filename)
-  const fileBuffer = Buffer.from(await file.arrayBuffer())
+
+  const rawBuffer = Buffer.from(await file.arrayBuffer())
+  const fileBuffer = isSvg
+    ? rawBuffer
+    : await sharp(rawBuffer).webp({ quality: 85 }).toBuffer()
 
   await mkdir(uploadDir, { recursive: true })
   await writeFile(filePath, fileBuffer)
