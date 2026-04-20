@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
   return (
     <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body className={GeistSans.className}>
@@ -40,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <WhatsAppButton />
         </div>
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
 }
